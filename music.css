@@ -1,0 +1,95 @@
+:root{
+    --location: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    margin: 4vh 0 2vh 0;
+    text-align: center;
+    font-size: 6vh;
+}
+
+header p{
+    font-size: 3vh;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.visuals h1{
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.pads {
+    background-color: #7fffd4;
+    width: 100%;
+    display: flex;
+}
+
+.pads > div{
+    width: 100vh;
+    height: 13vh;
+}
+
+.pad1 {
+    background-color: #00ffff;
+}
+.pad2 {
+    background-color: #708090;
+}
+.pad3 {
+    background-color: #deb887; 
+}
+.pad4 {
+    background-color: #ff6347;
+}
+.pad5 {
+    background-color: #6495ed;
+}
+.pad6 {
+    background-color: #9acd32 ;
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0%;
+        left: var(--location);
+    }
+    50%{
+        bottom: 60%;
+        left:var(--location);
+        height: 2vh;
+        width:2vh;
+        z-index: -1;
+    }
+    100%{
+        bottom: 0%;
+        left: var(--location);
+    }
+}
+
+.visuals > div{
+    position: absolute;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    bottom: 0%;
+    z-index: -1;
+}
